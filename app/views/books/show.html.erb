@@ -2,6 +2,6 @@
 <p><%= @book.title %></p>
 <h3>Body</h3>
 <p><%= @book.body %></p>
-<%= link_to "Edit", edit_book1_path(@book.id) %>
-<%= link_to "Back", book_path(@book.id) %>
+<%= link_to "Edit", edit_book_path(@book.id) %>
+<%= link_to "Back", book_path(@book) %>
 <!-- Backで一覧に飛ぶのを追加 -->

@@ -8,8 +8,8 @@
 <span class="book_body"><%= book.body %></span>
 
 <div>
-<p class="show_button"><%= link_to "Show", book1_path(book.id) %></p>
-<p class="edit_button"><%= link_to "Edit", edit_book1_path(book.id) %></p>
+<p class="show_button"><%= link_to "Show", book_path(book.id) %></p>
+<p class="edit_button"><%= link_to "Edit", edit_book_path(book.id) %></p>
 <p class="destroy_button"><%= link_to "Destroy", destroy_book_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %></p>
 </div>
 
