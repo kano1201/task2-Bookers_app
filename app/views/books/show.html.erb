@@ -3,5 +3,5 @@
 <h3>Body</h3>
 <p><%= @book.body %></p>
 <%= link_to "Edit", edit_book1_path(@book.id) %>
-
-<!-- destroyを一覧画面に移動させる、Backで一覧に飛ぶのを追加 -->
+<%= link_to "Back", book_path(@book.id) %>
+<!-- Backで一覧に飛ぶのを追加 -->

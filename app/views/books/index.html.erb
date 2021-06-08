@@ -15,4 +15,21 @@
 
 <% end %>
 
-<!-- showで詳細画面へ飛ぶ、Editで編集画面へ飛ぶ、Destroyで削除を追加、新規投稿画面を持ってくる -->
+<div class="new_book">
+<h2>New book</h2> <!--新規投稿画面-->
+
+<%= form_with model:@book, local:true do |f| %>
+
+<h4>Title</h4>
+<%= f.text_field :title %>
+
+<h4>Body</h4>
+<%= f.text_area :body %>
+
+<%= f.submit 'Create Book' %>
+
+<% end %>
+
+</div>
+
+
