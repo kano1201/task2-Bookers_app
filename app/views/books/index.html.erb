@@ -1,10 +1,18 @@
 <h1>Books</h1> <!-- 一覧画面 -->
+<p class="title_title">Title</p>
+<p class="title_body">Body</p>
+
 <% @books.each do |book| %>
 
-<p>Title</p>
-<%= link_to book.title, book1_path(book.id) %>
+<span class="book_title"><%= book.title %></span>
+<span class="book_body"><%= book.body %></span>
 
-<p>Body</p>
-<span><%= book.body %></span>
+<div>
+<p class="show_button"><%= link_to "Show", book1_path(book.id) %></p>
+<p class="edit_button"><%= link_to "Edit", edit_book1_path(book.id) %></p>
+<p class="destroy_button"><%= link_to "Destroy", destroy_book_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %></p>
+</div>
 
 <% end %>
+
+<!-- showで詳細画面へ飛ぶ、Editで編集画面へ飛ぶ、Destroyで削除を追加、新規投稿画面を持ってくる -->
