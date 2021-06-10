@@ -34,7 +34,7 @@ class BooksController < ApplicationController
       flash.now[:danger] = "error"
       render :edit
     end
-  end
+    end
 
   def destroy
     book = Book.find(params[:id])
