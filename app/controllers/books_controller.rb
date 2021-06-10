@@ -11,6 +11,7 @@ class BooksController < ApplicationController
   end
 
   def create
+    @books = Book.all
     @book = Book.new(book_params)
     if @book.save
      flash[:notice] = "successful"
@@ -34,7 +35,7 @@ class BooksController < ApplicationController
       flash.now[:danger] = "error"
       render :edit
     end
-    end
+  end
 
   def destroy
     book = Book.find(params[:id])
